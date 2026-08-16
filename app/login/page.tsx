@@ -37,8 +37,8 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
-      <div className="clay w-full max-w-md p-10">
+    <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-bgSecondary to-[#F1E8D7]">
+      <div className="clay w-full max-w-md p-10 shadow-clay">
         <div className="flex flex-col items-center mb-8">
           <div className="clay-sm w-16 h-16 flex items-center justify-center mb-4">
             <Sun className="w-8 h-8 text-primary" strokeWidth={2.2} />
@@ -47,9 +47,9 @@ export default function LoginPage() {
           <p className="text-sm text-textSecondary mt-1">Workforce &amp; Operations</p>
         </div>
 
-        <form onSubmit={onSubmit} className="space-y-4">
+        <form onSubmit={onSubmit} className="space-y-5">
           <div>
-            <label className="block text-xs font-semibold text-textSecondary mb-2 uppercase tracking-wide">
+            <label className="block text-xs font-semibold text-textSecondary mb-2 uppercase tracking-wide pl-1">
               Phone Number
             </label>
             <div className="relative">
@@ -61,13 +61,13 @@ export default function LoginPage() {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="10-digit phone"
-                className="clay-input w-full pl-11 text-text"
+                className="clay-input w-full pl-11 text-text h-12"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-textSecondary mb-2 uppercase tracking-wide">
+            <label className="block text-xs font-semibold text-textSecondary mb-2 uppercase tracking-wide pl-1">
               Password
             </label>
             <div className="relative">
@@ -79,27 +79,29 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter your password"
-                className="clay-input w-full pl-11 text-text"
+                className="clay-input w-full pl-11 text-text h-12"
               />
             </div>
           </div>
 
           {error && (
-            <div className="clay-sm p-3 text-sm text-danger bg-dangerSoft/40">
+            <div className="clay-inset p-3 text-sm text-danger bg-dangerSoft/50 border border-danger/10 rounded-xl text-center font-medium">
               {error}
             </div>
           )}
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="clay-btn w-full py-3 mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
-          >
-            {loading ? 'Signing in…' : 'Sign In'}
-          </button>
+          <div className="pt-2">
+            <button
+              type="submit"
+              disabled={loading}
+              className="clay-btn w-full py-3.5 disabled:opacity-60 disabled:cursor-not-allowed text-sm uppercase tracking-wider"
+            >
+              {loading ? 'Signing in…' : 'Sign In'}
+            </button>
+          </div>
         </form>
 
-        <p className="text-xs text-textMuted text-center mt-6">
+        <p className="text-xs text-textMuted text-center mt-8 font-medium">
           Sunrise OS &middot; Web Console
         </p>
       </div>
