@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { api } from '@/lib/api';
 import { useUser } from '@/lib/auth';
-import { Users, Cpu, Briefcase, CalendarDays, TrendingUp } from 'lucide-react';
+import { Users, Cpu, Briefcase, CalendarDays, TrendingUp, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Dashboard() {
