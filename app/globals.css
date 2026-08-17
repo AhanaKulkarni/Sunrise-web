@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --clay-bg: #FFFDF8;
+  --clay-bg: #F5EFE6;
 }
 
 html,
@@ -20,26 +20,27 @@ body {
   background: linear-gradient(145deg, #FFFFFF, #FAF5EA);
   border-radius: 1.5rem;
   box-shadow:
-    0 10px 32px rgba(245, 158, 11, 0.10),
-    0 2px 6px rgba(23, 23, 23, 0.03),
-    inset 2px 2px 8px rgba(255, 255, 255, 0.95),
-    inset -2px -2px 8px rgba(245, 158, 11, 0.05);
+    0 10px 32px rgba(245, 158, 11, 0.20),
+    0 2px 6px rgba(23, 23, 23, 0.05),
+    inset 2px 2px 8px rgba(255, 255, 255, 1),
+    inset -2px -2px 8px rgba(245, 158, 11, 0.10);
 }
 
 .clay-sm {
   background: linear-gradient(145deg, #FFFFFF, #FDF8ED);
   border-radius: 1rem;
   box-shadow:
-    0 4px 12px rgba(245, 158, 11, 0.08),
-    inset 1px 1px 3px rgba(255, 255, 255, 0.9);
+    0 6px 16px rgba(245, 158, 11, 0.15),
+    0 2px 4px rgba(23, 23, 23, 0.03),
+    inset 1px 1px 3px rgba(255, 255, 255, 1);
 }
 
 .clay-inset {
   background: linear-gradient(145deg, #FAF5EA, #FFFFFF);
   border-radius: 1rem;
   box-shadow:
-    inset 3px 3px 8px rgba(245, 158, 11, 0.12),
-    inset -3px -3px 8px rgba(255, 255, 255, 0.95);
+    inset 3px 3px 8px rgba(245, 158, 11, 0.20),
+    inset -3px -3px 8px rgba(255, 255, 255, 1);
 }
 
 .clay-btn {
@@ -72,16 +73,16 @@ body {
   border-radius: 0.875rem;
   padding: 0.75rem 1rem;
   box-shadow:
-    inset 3px 3px 6px rgba(245, 158, 11, 0.10),
-    inset -3px -3px 6px rgba(255, 255, 255, 0.95);
+    inset 3px 3px 6px rgba(245, 158, 11, 0.15),
+    inset -3px -3px 6px rgba(255, 255, 255, 1);
   outline: none;
   transition: box-shadow 0.15s ease;
 }
 .clay-input:focus {
   box-shadow:
-    inset 3px 3px 6px rgba(245, 158, 11, 0.15),
-    inset -3px -3px 6px rgba(255, 255, 255, 0.95),
-    0 0 0 3px rgba(251, 191, 36, 0.25);
+    inset 3px 3px 6px rgba(245, 158, 11, 0.20),
+    inset -3px -3px 6px rgba(255, 255, 255, 1),
+    0 0 0 3px rgba(251, 191, 36, 0.35);
 }
 
 .clay-nav-link {
@@ -102,8 +103,9 @@ body {
   color: #D97706;
   background: linear-gradient(145deg, #FFFFFF, #FDF8ED);
   box-shadow:
-    inset 2px 2px 4px rgba(245, 158, 11, 0.08),
-    inset -2px -2px 4px rgba(255, 255, 255, 0.9);
+    0 4px 12px rgba(245, 158, 11, 0.15),
+    inset 2px 2px 4px rgba(255, 255, 255, 1),
+    inset -2px -2px 4px rgba(245, 158, 11, 0.05);
 }
 
 /* Scrollbar polish */
