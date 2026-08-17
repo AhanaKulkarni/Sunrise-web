@@ -34,9 +34,9 @@ export default function Dashboard() {
   }, []);
 
   const cards = [
-    { label: 'Employees', value: stats.employees, sub: `${stats.activeEmp} active`, icon: Users, color: 'text-info', href: '/employees' },
-    { label: 'Machines', value: stats.machines, sub: 'in inventory', icon: Cpu, color: 'text-primary', href: '/machines' },
-    { label: 'Projects', value: stats.projects, sub: `${stats.activeProj} active`, icon: Briefcase, color: 'text-success', href: '/projects' },
+    { label: 'Employees', value: stats.employees, sub: `${stats.activeEmp} active`, icon: Users, color: 'text-warning', href: '/employees' },
+    { label: 'Machines', value: stats.machines, sub: 'in inventory', icon: Cpu, color: 'text-warning', href: '/machines' },
+    { label: 'Projects', value: stats.projects, sub: `${stats.activeProj} active`, icon: Briefcase, color: 'text-warning', href: '/projects' },
     { label: 'Attendance', value: '—', sub: 'view reports', icon: CalendarDays, color: 'text-warning', href: '/attendance' },
   ];
 
@@ -76,9 +76,9 @@ export default function Dashboard() {
               </div>
               
               {/* Fake chart SVG at bottom */}
-              <div className="absolute bottom-0 left-0 w-full h-12 opacity-60 group-hover:opacity-100 transition-opacity">
-                 <svg viewBox="0 0 100 30" preserveAspectRatio="none" className="w-full h-full text-warning/80">
-                   <path d={`${path} L100,30 L0,30 Z`} fill="currentColor" className="opacity-10" />
+              <div className="absolute bottom-0 left-0 w-full h-12 opacity-80 group-hover:opacity-100 transition-opacity">
+                 <svg viewBox="0 0 100 30" preserveAspectRatio="none" className="w-full h-full text-yellow-400">
+                   <path d={`${path} L100,30 L0,30 Z`} fill="currentColor" className="opacity-20" />
                    <path d={path} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
                  </svg>
               </div>
