@@ -113,10 +113,10 @@ export default function AttendanceReports() {
           from: range.from.toISOString(),
           to: range.to.toISOString(),
         });
-        data = await api.get<AttRow[]>(`/attendance?${p.toString()}`);
+        data = await api.get<AttRow[]>(`/attendance/today?${p.toString()}`);
       } catch {
         try {
-          data = await api.get<AttRow[]>('/attendance');
+          data = await api.get<AttRow[]>('/attendance/today');
         } catch {
           data = [];
         }
