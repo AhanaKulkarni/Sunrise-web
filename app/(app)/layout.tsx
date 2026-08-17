@@ -84,20 +84,38 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         </div>
 
         {/* Decorative Sun */}
-        <div className="absolute bottom-0 left-0 w-full h-48 pointer-events-none opacity-80 flex justify-center items-end">
-          {/* Sun Rays */}
-          <div className="absolute w-40 h-40 translate-y-20 flex items-center justify-center">
-            <div className="absolute w-1 h-6 bg-yellow-300 rounded-full -translate-y-24"></div>
-            <div className="absolute w-1 h-6 bg-yellow-300 rounded-full -translate-y-20 translate-x-16 rotate-[30deg]"></div>
-            <div className="absolute w-1 h-6 bg-yellow-300 rounded-full -translate-y-20 -translate-x-16 -rotate-[30deg]"></div>
-            <div className="absolute w-1 h-6 bg-yellow-300 rounded-full -translate-y-12 translate-x-24 rotate-[60deg]"></div>
-            <div className="absolute w-1 h-6 bg-yellow-300 rounded-full -translate-y-12 -translate-x-24 -rotate-[60deg]"></div>
-          </div>
-          
-          <div className="w-40 h-40 bg-gradient-to-t from-yellow-300 to-yellow-500 rounded-full translate-y-24 shadow-[0_0_60px_rgba(251,191,36,0.6)] relative z-10" />
-          
-          <svg className="absolute bottom-0 w-full h-16 text-white z-20" viewBox="0 0 1440 320" fill="currentColor">
-            <path d="M0,256L48,245.3C96,235,192,213,288,213.3C384,213,480,235,576,234.7C672,235,768,213,864,213.3C960,213,1056,235,1152,245.3C1248,256,1344,256,1392,256L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+        <div className="absolute bottom-0 left-0 w-full h-48 pointer-events-none flex justify-center items-end overflow-hidden">
+          <svg viewBox="0 0 200 120" className="w-full h-auto translate-y-2">
+            {/* Sun Glow */}
+            <circle cx="100" cy="100" r="50" fill="#FDE68A" opacity="0.4" filter="blur(15px)" />
+            {/* Main Sun */}
+            <circle cx="100" cy="100" r="40" fill="url(#sun-grad)" />
+            {/* Rays */}
+            <path d="M100 35 L100 22" stroke="#FDE68A" strokeWidth="4" strokeLinecap="round" />
+            <path d="M60 55 L50 45" stroke="#FDE68A" strokeWidth="4" strokeLinecap="round" />
+            <path d="M140 55 L150 45" stroke="#FDE68A" strokeWidth="4" strokeLinecap="round" />
+            <path d="M35 100 L22 100" stroke="#FDE68A" strokeWidth="4" strokeLinecap="round" />
+            <path d="M165 100 L178 100" stroke="#FDE68A" strokeWidth="4" strokeLinecap="round" />
+            
+            {/* Clouds */}
+            <g fill="#FFFFFF">
+              {/* Left Cloud */}
+              <rect x="20" y="85" width="60" height="20" rx="10" />
+              <circle cx="45" cy="85" r="15" />
+              <circle cx="65" cy="90" r="10" />
+              {/* Right Cloud */}
+              <rect x="110" y="75" width="70" height="24" rx="12" />
+              <circle cx="135" cy="75" r="16" />
+              <circle cx="160" cy="78" r="12" />
+              <circle cx="115" cy="82" r="8" />
+            </g>
+
+            <defs>
+              <linearGradient id="sun-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#FCD34D" />
+                <stop offset="100%" stopColor="#F59E0B" />
+              </linearGradient>
+            </defs>
           </svg>
         </div>
       </aside>

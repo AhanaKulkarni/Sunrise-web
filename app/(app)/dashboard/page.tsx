@@ -75,13 +75,6 @@ export default function Dashboard() {
                 <span className="text-success">{c.sub}</span>
               </div>
               
-              {/* Fake chart SVG at bottom */}
-              <div className="absolute bottom-0 left-0 w-full h-12 opacity-80 group-hover:opacity-100 transition-opacity">
-                 <svg viewBox="0 0 100 30" preserveAspectRatio="none" className="w-full h-full text-yellow-400">
-                   <path d={`${path} L100,30 L0,30 Z`} fill="currentColor" className="opacity-20" />
-                   <path d={path} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-                 </svg>
-              </div>
             </Link>
           );
         })}
